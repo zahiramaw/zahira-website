@@ -3248,8 +3248,8 @@ iframe[src*="youtube"] {
   width: 160px;
   height: 160px;
   background: #800000;
-  right: 10px;
-  top: 26px;
+  right: -10px;
+  top: -14px;
   transform: rotate(8deg);
 }
 
@@ -3544,5 +3544,123 @@ iframe[src*="youtube"] {
 @media (max-width: 600px) {
   .hero-inner {
     padding: 54px 12px;
+  }
+}
+
+/* Centered brand header (logo + name stacked, no top nav) */
+.header-banner .header-banner-content--centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-align: center;
+}
+
+.header-banner .header-banner-content--centered .header-brand-mark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.header-banner .header-banner-content--centered .brand-flag {
+  display: flex;
+  flex-direction: column;
+  width: 52px;
+  height: 35px;
+  overflow: hidden;
+  transform: rotate(90deg);
+  margin-top: -8px;
+  margin-bottom: 15px;
+}
+
+.header-banner .header-banner-content--centered .brand-flag__stripe {
+  flex: 1 1 0;
+  min-height: 0;
+  width: 100%;
+}
+
+.header-banner .header-banner-content--centered .brand-flag__stripe--maroon {
+  background: #820000;
+}
+
+.header-banner .header-banner-content--centered .brand-flag__stripe--white {
+  background: #fff;
+}
+
+.header-banner .header-banner-content--centered .brand-flag__stripe--blue {
+  background: #043161;
+}
+
+.header-banner .header-banner-content--centered .header-logo {
+  flex: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-banner .header-banner-content--centered .header-title {
+  text-align: center;
+  padding: 0;
+  flex: none;
+  width: 100%;
+  max-width: 100%;
+}
+
+.header-banner .header-banner-content--centered .brand-motto {
+  margin: 6px 0 0;
+  margin-block-end: 0;
+  font-family: Lato, system-ui, sans-serif;
+  font-size: clamp(10px, 2vw, 12px);
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+  color: var(--zcm-muted);
+}
+
+.header-banner .header-banner-content--centered .main-logo {
+  width: auto;
+  height: auto;
+  display: block;
+  max-width: 52px !important;
+  max-height: 52px !important;
+  min-width: 0 !important;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .header-banner .header-banner-content.header-banner-content--centered {
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+
+  .header-banner .header-banner-content--centered .header-title {
+    flex: none !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-banner .header-banner-content--centered .header-title {
+    padding: 0 !important;
+  }
+
+  .header-banner .header-banner-content--centered .main-logo {
+    max-width: 44px !important;
+    max-height: 44px !important;
+    min-width: 0 !important;
+  }
+
+  .header-banner .header-banner-content--centered .brand-flag {
+    width: 44px;
+    height: 10px;
   }
 }
